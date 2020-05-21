@@ -1,20 +1,20 @@
 //function returns pointer
-void *
+vazio *
 __cdecl
 f1(
    UINTN             param1
   );
 
 
-int *
+inteiro *
 __cdecl
 f2 (
-   int             param1
+   inteiro             param1
   );
 
 
-int MyStruct *
+inteiro MyStruct *
 f3 (
-   int             param1,
-   char            param2
+   inteiro             param1,
+   caracter            param2
   );

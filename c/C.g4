@@ -210,7 +210,7 @@ initDeclarator
     ;
 
 storageClassSpecifier
-    :   'typedef'
+    :   'defTipo'
     |   'extern'
     |   'static'
     |   '_Thread_local'
@@ -219,13 +219,13 @@ storageClassSpecifier
     ;
 
 typeSpecifier
-    :   ('void'
-    |   'char'
-    |   'short'
-    |   'int'
-    |   'long'
-    |   'float'
-    |   'double'
+    :   ('vazio'
+    |   'caracter'
+    |   'curto'
+    |   'inteiro'
+    |   'longo'
+    |   'flutuante'
+    |   'duplo'
     |   'signed'
     |   'unsigned'
     |   '_Bool'
@@ -248,7 +248,7 @@ structOrUnionSpecifier
     ;
 
 structOrUnion
-    :   'struct'
+    :   'estrutura'
     |   'union'
     ;
 
@@ -302,7 +302,7 @@ atomicTypeSpecifier
     ;
 
 typeQualifier
-    :   'const'
+    :   'constante'
     |   'restrict'
     |   'volatile'
     |   '_Atomic'
@@ -488,7 +488,7 @@ expressionStatement
     ;
 
 selectionStatement
-    :   'if' '(' expression ')' statement ('else' statement)?
+    :   'se' '(' expression ')' statement ('senao' statement)?
     |   'switch' '(' expression ')' statement
     ;
 
@@ -520,7 +520,7 @@ jumpStatement
     :   'goto' Identifier ';'
     |   'continue' ';'
     |   'break' ';'
-    |   'return' expression? ';'
+    |   'retorna' expression? ';'
     |   'goto' unaryExpression ';' // GCC extension
     ;
 
@@ -551,35 +551,35 @@ declarationList
 Auto : 'auto';
 Break : 'break';
 Case : 'case';
-Char : 'char';
-Const : 'const';
+Char : 'caracter';
+Const : 'constante';
 Continue : 'continue';
 Default : 'default';
 Do : 'do';
-Double : 'double';
-Else : 'else';
+Double : 'duplo';
+Else : 'senao';
 Enum : 'enum';
 Extern : 'extern';
-Float : 'float';
-For : 'for';
+Float : 'flutuante';
+For : 'para';
 Goto : 'goto';
-If : 'if';
+If : 'se';
 Inline : 'inline';
-Int : 'int';
-Long : 'long';
+Int : 'inteiro';
+Long : 'longo';
 Register : 'register';
 Restrict : 'restrict';
-Return : 'return';
-Short : 'short';
+Return : 'retorna';
+Short : 'curto';
 Signed : 'signed';
 Sizeof : 'sizeof';
 Static : 'static';
-Struct : 'struct';
+Struct : 'estrutura';
 Switch : 'switch';
-Typedef : 'typedef';
+Typedef : 'defTipo';
 Union : 'union';
 Unsigned : 'unsigned';
-Void : 'void';
+Void : 'vazio';
 Volatile : 'volatile';
 While : 'while';
 

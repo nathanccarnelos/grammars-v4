@@ -1,12 +1,12 @@
-    int main()
+    inteiro main()
     {
-        int i, sum = 0;
+        inteiro i, sum = 0;
        
-        for ( i = 1; i <= LAST; i++ ) {
+        para ( i = 1; i <= LAST; i++ ) {
           sum += i;
-        } /*-for-*/
+        }
         printf("sum = %d\n", sum);
 
-        return 0;
+        retorna 0;
     }
 

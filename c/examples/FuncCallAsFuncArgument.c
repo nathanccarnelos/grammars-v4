@@ -4,13 +4,13 @@ And func forward declarations.
 And func call as func call argument.
 */
 
-void aX(void);
-int a1(int param1);
-int a2(int param1, param2);
-void a3();
-void a3(void);
+vazio aX(vazio);
+inteiro a1(inteiro param1);
+inteiro a2(inteiro param1, param2);
+vazio a3();
+vazio a3(vazio);
 
-int f(int arg1, char arg2)
+inteiro f(inteiro arg1, char arg2)
 {
 	a1(arg1);
 	a2(arg1, arg2);

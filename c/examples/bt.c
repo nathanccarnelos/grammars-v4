@@ -1,34 +1,34 @@
-struct tree_el {
-   int val;
-   struct tree_el * right, * left;
+estrutura tree_el {
+   inteiro val;
+   estrutura tree_el * right, * left;
 };
 
-typedef struct tree_el node;
+defTipo estrutura tree_el node;
 
-void insert(node ** tree, node * item) {
-   if(!(*tree)) {
+vazio insert(node ** tree, node * item) {
+   se(!(*tree)) {
       *tree = item;
-      return;
+      retorna;
    }
-   if(item->val<(*tree)->val)
+   se(item->val<(*tree)->val)
       insert(&(*tree)->left, item);
-   else if(item->val>(*tree)->val)
+   senao se(item->val>(*tree)->val)
       insert(&(*tree)->right, item);
 }
 
-void printout(node * tree) {
-   if(tree->left) printout(tree->left);
+vazio printout(node * tree) {
+   se(tree->left) printout(tree->left);
    printf("%d\n",tree->val);
-   if(tree->right) printout(tree->right);
+   se(tree->right) printout(tree->right);
 }
 
-void main() {
+vazio main() {
    node * curr, * root;
-   int i;
+   inteiro i;
 
    root = NULL;
 
-   for(i=1;i<=10;i++) {
+   para(i=1;i<=10;i++) {
       curr = (node *)malloc(sizeof(node));
       curr->left = curr->right = NULL;
       curr->val = rand();

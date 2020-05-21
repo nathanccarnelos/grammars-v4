@@ -473,12 +473,9 @@ PK_Version
     : ':version'
     ;
 
-RS_Model //  for model responses
-    : 'model'
-    ;
-
 UndefinedSymbol:
     Sym (Digit | Sym)*;
+
 
 
 // Parser Rules Start
@@ -506,7 +503,6 @@ generalReservedWord
     | GRW_Numeral
     | GRW_Par
     | GRW_String
-    | RS_Model
     ;
 
 
@@ -998,9 +994,11 @@ reason_unknown
     ;
 
 model_response
-    : ParOpen cmd_defineFun ParClose
-    | ParOpen cmd_defineFunRec ParClose
-    | ParOpen cmd_defineFunsRec ParClose
+    : ParOpen CMD_DefineFun function_def ParClose
+    | ParOpen CMD_DefineFunRec function_def ParClose
+    // cardinalitiees for function_dec and term have to be n+1
+    | ParOpen CMD_DefineFunsRec ParOpen function_dec+ ParClose ParOpen term+
+    ParClose ParClose
     ;
 
 info_response
@@ -1044,8 +1042,7 @@ get_info_response
     ;
 
 get_model_response
-    : ParOpen RS_Model model_response* ParClose
-    | ParOpen model_response* ParClose
+    : ParOpen model_response* ParClose
     ;
 
 get_option_response

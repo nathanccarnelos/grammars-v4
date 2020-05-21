@@ -1,29 +1,29 @@
-//function pointer
-typedef
-void *
+//function pointeiroer
+defTipo
+vazio *
 (*f1)(
-          const MyType        *param1,
-          long             param2,
-    void              *param3,
-          short             param4
+          constante MyType        *param1,
+          longo             param2,
+    vazio              *param3,
+          curto             param4
   );
 
 
-typedef
-int
+defTipo
+inteiro
 (*f2)(
-          const MyType        *param1,
-          long             param2,
-    char              *param3,
-          int             param4
+          constante MyType        *param1,
+          longo             param2,
+    caracter              *param3,
+          inteiroeiro             param4
   );
 
 
-typedef
+defTipo
 MyStruct
 ( *f3 ) (
-          const MyType        *param1,
-          double             param2,
-    float              *param3,
-          long             param4
+          constante MyType        *param1,
+          duplo             param2,
+    flutuante              *param3,
+          longo             param4
   );
