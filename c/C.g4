@@ -52,7 +52,7 @@ genericAssocList
 
 genericAssociation
     :   typeName ':' assignmentExpression
-    |   'default' ':' assignmentExpression
+    |   'padrao' ':' assignmentExpression
     ;
 
 postfixExpression
@@ -212,10 +212,10 @@ initDeclarator
 storageClassSpecifier
     :   'defTipo'
     |   'extern'
-    |   'static'
+    |   'estatico'
     |   '_Thread_local'
     |   'auto'
-    |   'register'
+    |   'resgistrar'
     ;
 
 typeSpecifier
@@ -249,7 +249,7 @@ structOrUnionSpecifier
 
 structOrUnion
     :   'estrutura'
-    |   'union'
+    |   'uniao'
     ;
 
 structDeclarationList
@@ -303,7 +303,7 @@ atomicTypeSpecifier
 
 typeQualifier
     :   'constante'
-    |   'restrict'
+    |   'restrito'
     |   'volatile'
     |   '_Atomic'
     ;
@@ -330,8 +330,8 @@ directDeclarator
     :   Identifier
     |   '(' declarator ')'
     |   directDeclarator '[' typeQualifierList? assignmentExpression? ']'
-    |   directDeclarator '[' 'static' typeQualifierList? assignmentExpression ']'
-    |   directDeclarator '[' typeQualifierList 'static' assignmentExpression ']'
+    |   directDeclarator '[' 'estatico' typeQualifierList? assignmentExpression ']'
+    |   directDeclarator '[' typeQualifierList 'estatico' assignmentExpression ']'
     |   directDeclarator '[' typeQualifierList? '*' ']'
     |   directDeclarator '(' parameterTypeList ')'
     |   directDeclarator '(' identifierList? ')'
@@ -409,13 +409,13 @@ abstractDeclarator
 directAbstractDeclarator
     :   '(' abstractDeclarator ')' gccDeclaratorExtension*
     |   '[' typeQualifierList? assignmentExpression? ']'
-    |   '[' 'static' typeQualifierList? assignmentExpression ']'
-    |   '[' typeQualifierList 'static' assignmentExpression ']'
+    |   '[' 'estatico' typeQualifierList? assignmentExpression ']'
+    |   '[' typeQualifierList 'estatico' assignmentExpression ']'
     |   '[' '*' ']'
     |   '(' parameterTypeList? ')' gccDeclaratorExtension*
     |   directAbstractDeclarator '[' typeQualifierList? assignmentExpression? ']'
-    |   directAbstractDeclarator '[' 'static' typeQualifierList? assignmentExpression ']'
-    |   directAbstractDeclarator '[' typeQualifierList 'static' assignmentExpression ']'
+    |   directAbstractDeclarator '[' 'estatico' typeQualifierList? assignmentExpression ']'
+    |   directAbstractDeclarator '[' typeQualifierList 'estatico' assignmentExpression ']'
     |   directAbstractDeclarator '[' '*' ']'
     |   directAbstractDeclarator '(' parameterTypeList? ')' gccDeclaratorExtension*
     ;
@@ -465,8 +465,8 @@ statement
 
 labeledStatement
     :   Identifier ':' statement
-    |   'case' constantExpression ':' statement
-    |   'default' ':' statement
+    |   'caso' constantExpression ':' statement
+    |   'padrao' ':' statement
     ;
 
 compoundStatement
@@ -489,7 +489,7 @@ expressionStatement
 
 selectionStatement
     :   'se' '(' expression ')' statement ('senao' statement)?
-    |   'switch' '(' expression ')' statement
+    |   'escolha' '(' expression ')' statement
     ;
 
 iterationStatement
@@ -517,11 +517,11 @@ forExpression
     ;
 
 jumpStatement
-    :   'goto' Identifier ';'
+    :   'vapara' Identifier ';'
     |   'continue' ';'
-    |   'break' ';'
+    |   'parar' ';'
     |   'retorna' expression? ';'
-    |   'goto' unaryExpression ';' // GCC extension
+    |   'vapara' unaryExpression ';' // GCC extension
     ;
 
 compilationUnit
@@ -549,35 +549,35 @@ declarationList
     ;
 
 Auto : 'auto';
-Break : 'break';
-Case : 'case';
+Break : 'parar';
+Case : 'caso';
 Char : 'caracter';
 Const : 'constante';
 Continue : 'continue';
-Default : 'default';
-Do : 'do';
+Default : 'padrao';
+Do : 'faca';
 Double : 'duplo';
 Else : 'senao';
 Enum : 'enum';
 Extern : 'extern';
 Float : 'flutuante';
 For : 'para';
-Goto : 'goto';
+Goto : 'vaPara';
 If : 'se';
 Inline : 'inline';
 Int : 'inteiro';
 Long : 'longo';
-Register : 'register';
-Restrict : 'restrict';
+Register : 'resgistrar';
+Restrict : 'restrito';
 Return : 'retorna';
 Short : 'curto';
 Signed : 'signed';
 Sizeof : 'tamanhoDe';
-Static : 'static';
+Static : 'estatico';
 Struct : 'estrutura';
-Switch : 'switch';
+Switch : 'escolha';
 Typedef : 'defTipo';
-Union : 'union';
+Union : 'uniao';
 Unsigned : 'unsigned';
 Void : 'vazio';
 Volatile : 'volatile';
