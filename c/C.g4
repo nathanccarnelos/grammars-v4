@@ -79,8 +79,8 @@ unaryExpression
     |   '++' unaryExpression
     |   '--' unaryExpression
     |   unaryOperator castExpression
-    |   'sizeof' unaryExpression
-    |   'sizeof' '(' typeName ')'
+    |   'tamanhoDe' unaryExpression
+    |   'tamanhoDe' '(' typeName ')'
     |   '_Alignof' '(' typeName ')'
     |   '&&' Identifier // GCC extension address of label
     ;
@@ -572,7 +572,7 @@ Restrict : 'restrict';
 Return : 'retorna';
 Short : 'curto';
 Signed : 'signed';
-Sizeof : 'sizeof';
+Sizeof : 'tamanhoDe';
 Static : 'static';
 Struct : 'estrutura';
 Switch : 'switch';
@@ -581,7 +581,7 @@ Union : 'union';
 Unsigned : 'unsigned';
 Void : 'vazio';
 Volatile : 'volatile';
-While : 'while';
+While : 'enquanto';
 
 Alignas : '_Alignas';
 Alignof : '_Alignof';
