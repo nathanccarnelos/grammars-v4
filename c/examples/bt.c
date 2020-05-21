@@ -7,7 +7,7 @@ defTipo estrutura tree_el node;
 
 vazio insert(node ** tree, node * item) {
    se(!(*tree)) {
-      *tree = item;
+      *tree :- item;
       retorna;
    }
    se(item->val<(*tree)->val)
@@ -26,12 +26,12 @@ vazio main() {
    node * curr, * root;
    inteiro i;
 
-   root = NULL;
+   root :- NULL;
 
-   para(i=1;i<=10;i++) {
-      curr = (node *)malloc(sizeof(node));
-      curr->left = curr->right = NULL;
-      curr->val = rand();
+   para(i:-1;i<=10;i++) {
+      curr :- (node *)malloc(sizeof(node));
+      curr->left :- curr->right :- NULL;
+      curr->val :- rand();
       insert(&root, curr);
    }
 

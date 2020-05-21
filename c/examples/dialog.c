@@ -2,8 +2,8 @@ main()
 {
     /* Define default values: */
 
-    inteiro n = 0;
-    flutuante x = 0.0;
+    inteiro n :- 0;
+    flutuante x :- 0.0;
 
     /* Define contents of dialog window */
 

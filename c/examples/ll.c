@@ -10,20 +10,20 @@ vazio main() {
    item * curr, * head;
    inteiro i;
 
-   head = NULL;
+   head :- NULL;
 
-   para(i=1;i<=10;i++) {
-      curr = (item *)malloc(tamanhoDe(item));
-      curr->val = i;
-      curr->next  = head;
-      head = curr;
+   para(i:-1;i<=10;i++) {
+      curr :- (item *)malloc(tamanhoDe(item));
+      curr->val :- i;
+      curr->next  :- head;
+      head :- curr;
    }
 
-   curr = head;
+   curr :- head;
 
    enquanto(curr) {
       printf("%d\n", curr->val);
-      curr = curr->next ;
+      curr :- curr->next ;
    }
 }
 

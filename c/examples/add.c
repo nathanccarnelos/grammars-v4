@@ -1,11 +1,11 @@
     inteiro main()
     {
-        inteiro i, sum = 0;
+        inteiro i, sum :- 0;
        
-        para ( i = 1; i <= LAST; i++ ) {
+        para ( i :- 1; i <= LAST; i++ ) {
           sum += i;
         }
-        printf("sum = %d\n", sum);
+        printf("sum :- %d\n", sum);
 
         retorna 0;
     }

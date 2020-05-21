@@ -125,8 +125,8 @@ relationalExpression
 
 equalityExpression
     :   relationalExpression
-    |   equalityExpression '==' relationalExpression
-    |   equalityExpression '!=' relationalExpression
+    |   equalityExpression '===' relationalExpression
+    |   equalityExpression '!==' relationalExpression
     ;
 
 andExpression
@@ -165,7 +165,7 @@ assignmentExpression
     ;
 
 assignmentOperator
-    :   '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
+    :   ':-' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
     ;
 
 expression
@@ -206,7 +206,7 @@ initDeclaratorList
 
 initDeclarator
     :   declarator
-    |   declarator '=' initializer
+    |   declarator ':-' initializer
     ;
 
 storageClassSpecifier
@@ -290,7 +290,7 @@ enumeratorList
 
 enumerator
     :   enumerationConstant
-    |   enumerationConstant '=' constantExpression
+    |   enumerationConstant ':-' constantExpression
     ;
 
 enumerationConstant
@@ -436,7 +436,7 @@ initializerList
     ;
 
 designation
-    :   designatorList '='
+    :   designatorList ':-'
     ;
 
 designatorList
@@ -629,7 +629,7 @@ Colon : ':';
 Semi : ';';
 Comma : ',';
 
-Assign : '=';
+Assign : ':-';
 // '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
 StarAssign : '*=';
 DivAssign : '/=';
@@ -642,8 +642,8 @@ AndAssign : '&=';
 XorAssign : '^=';
 OrAssign : '|=';
 
-Equal : '==';
-NotEqual : '!=';
+Equal : '===';
+NotEqual : '!==';
 
 Arrow : '->';
 Dot : '.';
