@@ -165,7 +165,7 @@ assignmentExpression
     ;
 
 assignmentOperator
-    :   ':-' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
+    :   ':-' | '*:' | '/:' | '%:' | '+:' | '-:' | '<<:' | '>>:' | '&:' | '^:' | '|:'
     ;
 
 expression
@@ -630,17 +630,17 @@ Semi : ';';
 Comma : ',';
 
 Assign : ':-';
-// '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
-StarAssign : '*=';
-DivAssign : '/=';
-ModAssign : '%=';
-PlusAssign : '+=';
-MinusAssign : '-=';
-LeftShiftAssign : '<<=';
-RightShiftAssign : '>>=';
-AndAssign : '&=';
-XorAssign : '^=';
-OrAssign : '|=';
+// '*:' | '/:' | '%:' | '+:' | '-:' | '<<:' | '>>:' | '&:' | '^:' | '|:'
+StarAssign : '*:';
+DivAssign : '/:';
+ModAssign : '%:';
+PlusAssign : '+:';
+MinusAssign : '-:';
+LeftShiftAssign : '<<:';
+RightShiftAssign : '>>:';
+AndAssign : '&:';
+XorAssign : '^:';
+OrAssign : '|:';
 
 Equal : '===';
 NotEqual : '!==';
